@@ -1,0 +1,50 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class question_three {
+	public static void swapNumber(ArrayList<Integer> list,int first,int second)
+	{
+		Integer firstValue = Integer.valueOf(list.get(first));
+		Integer secondValue = Integer.valueOf(list.get(second));
+		
+		for(int i=0;i<list.size();i++)
+		{
+			if(i== first)
+			{
+				list.set(i, secondValue);
+			}
+			else if(i==second)
+			{
+				list.set(i, firstValue);
+			}
+		}
+		
+		System.out.println(list);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Please enter -1 to exit");
+			
+			ArrayList<Integer> list = new ArrayList<>();
+			while(true)
+			{
+				System.out.println("Enter a element");
+				int n = sc.nextInt();
+				if(n==-1)
+				{
+					break;
+				}
+				list.add(n);
+			}
+			
+			swapNumber(list, 2, 4);
+//			for second iteration you need to stop program re execute the program
+			swapNumber(list, 0, 1);
+	}
+
+}
