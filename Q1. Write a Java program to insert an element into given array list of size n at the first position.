@@ -1,0 +1,29 @@
+package ArrayList;
+
+import java.util.ArrayList;
+
+public class question_first {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Integer> list1 = new ArrayList<Integer>();
+		list1.add(1);
+		list1.add(2);
+		list1.add(3);
+		list1.add(4);
+		list1.add(5);
+		
+//		adding 0 th position
+		
+		list1.add(0,0);
+		System.out.println(list1);
+		
+		ArrayList<Integer> list2 = new ArrayList<>();
+		
+		list2.add(4);
+		list2.add(1,7);
+		System.out.println(list2);
+	}
+
+}
