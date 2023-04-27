@@ -1,0 +1,48 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class sortArray {
+	public static void sortArrayList(ArrayList<Integer> list) {
+		for(int j=0;j<list.size();j++)
+		{
+			for(int i=0;i<list.size()-1;i++)
+			{
+				if(list.get(i) > list.get(i+1))
+				{
+					Integer temp = Integer.valueOf(list.get(i));
+					list.set(i, list.get(i+1));
+					list.set(i+1, temp);
+				}
+			}
+		}
+
+		System.out.println();
+		System.out.println("Sorted array");
+		System.out.println();
+		System.out.println(list);
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Please enter -1 to exit");
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		while(true)
+		{
+			System.out.println("Enter a element");
+			int n = sc.nextInt();
+			if(n==-1)
+			{
+				break;
+			}
+			list.add(n);
+		}
+		sortArrayList(list);
+	}
+
+}
